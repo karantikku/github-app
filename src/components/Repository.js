@@ -1,11 +1,20 @@
 import React from 'react';
 
-export default () => (
-    <div>
-        <h1>
-           Repository 
-        </h1>
+
+class Repository extends React.Component {
+    // constructor(props) {
+    //     super(props);
+    // }
+    render() { 
+        return (
+            <div className="dashboard__repository">
+                <p>{this.props.name}</p>
+                <p>{this.props.description}</p>
     </div>
-);
-    
+        );
+    }
+};
+
+export default Repository;
+
 

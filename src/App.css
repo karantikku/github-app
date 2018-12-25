@@ -30,3 +30,23 @@
     transform: rotate(360deg);
   }
 }
+.user {
+  float: left;
+}
+.user__image {
+  height: 232px;
+  width: 232px;
+}
+.user__user-name {
+  font-size: 24px;
+}
+.user__user-email {
+  font-size: 16px;
+}
+.dashboard__repository {
+  font-size: 12px;
+  width: 359px;
+  float: left;
+  border-style: solid;
+  margin: 10px;
+}
