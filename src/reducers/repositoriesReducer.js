@@ -1,7 +1,10 @@
-import { FETCH_REPOSITORIES_REQUEST, FETCH_REPOSITORIES_RESPONSE } from "../actions/repositories";
+import {
+  FETCH_REPOSITORIES_REQUEST,
+  FETCH_REPOSITORIES_RESPONSE
+} from "../actions/repositories";
 
 const defaultRepositoryState = {
-  repositories:[],
+  repositories: [],
   isFetching: false,
   requestedAt: ""
 };
