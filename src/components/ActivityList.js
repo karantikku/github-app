@@ -10,7 +10,7 @@ class ActivityList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="column middle">
         <h6>Contributions</h6>
         {this.props.activities.activities.map(activity => {
           return (

@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-    <div className="user">
+    <div className="column side">
         <img className="user__image" src="https://avatars3.githubusercontent.com/u/16414052?s=460&v=4" alt="user" />
         <p className="user__user-name">
             Karan Tikku

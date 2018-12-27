@@ -10,7 +10,7 @@ class RepositoriesBlock extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="column middle">
         <h6>Repositories</h6>
         {this.props.repositories.repositories.map(repository => {
           return (
