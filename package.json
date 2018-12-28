@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gitstar-components": "^1.0.5",
     "react": "^16.5.2",
     "react-css-grid": "^2.0.0-0",
     "react-dom": "^16.5.2",
