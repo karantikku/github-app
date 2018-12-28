@@ -8,6 +8,9 @@ export default () => (
       alt="user"
     />
     <p className="user__user-name">Karan Tikku</p>
-    <p className="user__user-email">Email: karantikku7@gmail.com</p>
+    <p className="user__user-email">
+      Email:
+      <span className="user_emailId">karantikku7@gmail.com</span>
+    </p>
   </div>
 );

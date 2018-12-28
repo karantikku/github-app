@@ -11,7 +11,7 @@ class ActivityList extends React.Component {
   render() {
     return (
       <div className="column middle">
-        <h6>Contributions</h6>
+        <h6 className="Title">Contributions</h6>
         {this.props.activities.activities.map(activity => {
           return (
             <ActivityItem

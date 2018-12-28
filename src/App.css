@@ -7,41 +7,104 @@
   width: 232px;
 }
 .user__user-name {
-  font-size: 24px;
+  font-size: 26px;
+  font-weight: 600;
 }
 .user__user-email {
-  font-size: 16px;
+  font-size: 14px;
 }
+.user_emailId {
+  color: #0366d6;
+}
+
 .dashboard__repository {
   font-size: 12px;
   width: 359px;
-  border-style: solid;
   margin: 10px;
+  display: inline-table;
+  padding: 1%;
+  border: 1px solid lightsteelblue;
+  border-radius: 3px;
+}
+
+.dashboard__contributions {
+  border-color: lightsteelblue;
+  font-size: 12px;
+  margin: 0 0 0 10px;
+  padding: 1% 1% 1% 4%;
+  border-style: solid;
+  border-width: 1px 0px 0 1px;
+  width: 60%;
 }
 
 .wrapper {
-  margin: 15px;
-  background-color: red;
+  padding: 15px;
 }
 
 .row {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+.column.left {
+  border: 1px solid lightsteelblue;
+  border-radius: 20px;
+  flex: 0 0 25vw;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.column.right {
+  flex: 0 0 70vw;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .user {
-  background-color: blue;
 }
 
 .info-block {
-  background-color: green;
+}
+
+.Heading {
+  color: #0366d6;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.Description {
+  color: #586069;
+}
+
+.Title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.ListIcon {
+  background-color: lightsteelblue;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  float: left;
+  height: 25px;
+  margin-left: -53px;
+  margin-top: 5px;
+  text-align: center;
+  width: 25px;
+}
+
+@media (max-width: 768px) {
+  .row {
+    display: block;
+  }
+  .column.left {
+    flex: 0 0 100vw;
+    padding-right: 0px;
+  }
+
+  .column.right {
+    flex: 0 0 100vw;
+    text-align: center;
+    padding-left: 0px;
+  }
 }
