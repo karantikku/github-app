@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-
 .user__image {
   height: 232px;
   width: 232px;
@@ -20,27 +19,29 @@
   margin: 10px;
 }
 
+.wrapper {
+  margin: 15px;
+  background-color: red;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .column {
-  float: left;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
-/* Left and right column */
-.column.side {
-  width: 25%;
-  background: yellow;
+.user {
+  background-color: blue;
 }
 
-/* Middle column */
-.column.middle {
-  width: 70%;
-  background: lightsalmon;
-  
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
+.info-block {
+  background-color: green;
 }
