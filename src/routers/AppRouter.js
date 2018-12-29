@@ -9,9 +9,7 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Switch>
-        <Route path="/" component={LoginPage} exact={true} />
-        <Route path="/dashboard" component={DashboardPage} />
-        <Route path="/repositories" component={RepositoriesListPage} />
+        <Route path="/" component={DashboardPage} exact={true} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>
