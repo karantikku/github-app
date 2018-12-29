@@ -11,7 +11,7 @@ import {
 } from "gitstar-components";
 
 const CLIENT_ID = "d9d056daaa094fb72c81";
-const REDIRECT_URI = "http://localhost:3000/";
+const REDIRECT_URI = "https://github-clone-app.herokuapp.com/";
 
 class LoginPage extends Component {
   state = {

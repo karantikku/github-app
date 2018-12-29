@@ -11,7 +11,7 @@ class RepositoriesBlock extends React.Component {
   render() {
     return (
       <div className="column middle">
-        <h6>Repositories</h6>
+        <h6 className="Title">Repositories</h6>
         {this.props.repositories.repositories.map(repository => {
           return (
             <Repository
