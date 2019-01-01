@@ -11,15 +11,13 @@ import {
 import { AuthConsumer } from './AuthContext'
 
 const CLIENT_ID = "d9d056daaa094fb72c81";
-const REDIRECT_URI = "http://localhost:3000";
+const REDIRECT_URI = "https://github-clone-app.herokuapp.com";
 class LoginPage extends Component {
  
-  
   state = {
     status: STATUS.INITIAL,
     token: null,
-    isLoggedIn: false,
-    imgUrl: '../../public/github-background.jpg'
+    isLoggedIn: false
   };
 
    getUrlVars() {
