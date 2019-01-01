@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -59,12 +60,6 @@
   padding-left: 10px;
 }
 
-.user {
-}
-
-.info-block {
-}
-
 .Heading {
   color: #0366d6;
   font-weight: 600;
@@ -107,4 +102,7 @@
     text-align: center;
     padding-left: 0px;
   }
+ 
+ 
+
 }

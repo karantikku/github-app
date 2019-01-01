@@ -21,7 +21,7 @@ export const recieveACTIVITIES = json => {
 export const fetchACTIVITIESFromAPI = () => {
   return dispatch => {
     dispatch(fetchACTIVITIES());
-    return fetch(`https://api.github.com/users/karantikku/events`)
+    return fetch(`https://api.github.com/users/${sessionStorage.getItem('userName')}/events`)
       .then(
         response => response.json(),
         error => console.log("An error occurred.", error)

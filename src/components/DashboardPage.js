@@ -1,9 +1,14 @@
 import React from "react";
+import Header from './Header'
 import UserInfo from "./UserInfo";
 import RepositoriesBlock from "./RepositoriesBlock";
 import ActivityList from "./ActivityList";
-export default () => (
-  <div className="wrapper">
+class DashboardPage extends React.Component {
+ 
+  render() {
+    return (
+       <div className="wrapper">
+       <Header />
     <div className="row">
       <div className="column left">
         <UserInfo />
@@ -16,4 +21,8 @@ export default () => (
       </div>
     </div>
   </div>
-);
+    );
+  }
+};
+
+export default DashboardPage;

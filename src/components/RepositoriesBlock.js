@@ -12,6 +12,7 @@ class RepositoriesBlock extends React.Component {
     return (
       <div className="column middle">
         <h6 className="Title">Repositories</h6>
+        {!this.props.repositories.repositories.length > 0 && <p>You don’t have any repositories yet!</p> }
         {this.props.repositories.repositories.map(repository => {
           return (
             <Repository

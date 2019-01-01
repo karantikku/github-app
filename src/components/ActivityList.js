@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { fetchACTIVITIESFromAPI } from "../actions/activities";
 
 class ActivityList extends React.Component {
-  componentDidMount(props) {
+  componentDidMount() {
     this.props.dispatch(fetchACTIVITIESFromAPI());
   }
 
@@ -12,7 +12,8 @@ class ActivityList extends React.Component {
     return (
       <div className="column middle">
         <h6 className="Title">Contributions</h6>
-        {this.props.activities.activities.map(activity => {
+        {!this.props.activities.activities.length > 0 && <p>No activity</p> }
+        {this.props.activities.activities.length > 0 && this.props.activities.activities.map(activity => {
           return (
             <ActivityItem
               name={activity.repo.name}

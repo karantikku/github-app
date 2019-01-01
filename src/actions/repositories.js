@@ -25,7 +25,7 @@ export const recieveRepositories = json => {
 export const fetchRepositoriesFromAPI = () => {
   return dispatch => {
     dispatch(fetchRepositories());
-    return fetch(`https://api.github.com/users/karantikku/repos`)
+    return fetch(`https://api.github.com/users/${sessionStorage.getItem('userName')}/repos`)
       .then(
         response => response.json(),
         error => console.log("An error occurred.", error)
