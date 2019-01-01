@@ -18,7 +18,8 @@ class LoginPage extends Component {
   state = {
     status: STATUS.INITIAL,
     token: null,
-    isLoggedIn: false
+    isLoggedIn: false,
+    imgUrl: '../../public/github-background.jpg'
   };
 
    getUrlVars() {
@@ -66,7 +67,6 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div>
       <AuthConsumer>
       {({ isAuth, login, logout }) => (
         <Container>
@@ -82,15 +82,15 @@ class LoginPage extends Component {
               })`
             }}
           />
-          <a
-            style={{
-              display: this.state.status === STATUS.INITIAL ? "inline" : "none"
-            }}
-            href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`}
-            onClick={login}
-          >
-            Login
-          </a>
+          <a className="button"
+          style={{
+            display: this.state.status === STATUS.INITIAL ? "inline" : "none"
+          }}
+          href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`}
+          onClick={login}
+        >
+          Login
+        </a>
         </Header>
         <Loading
           status={this.state.status}
@@ -103,13 +103,11 @@ class LoginPage extends Component {
             }
           }}
         />
+       
       </Container>
       )}
       </AuthConsumer>
-      <div className="login-page">
-      </div>
-      </div>
-     
+      
     );
   }
 }
