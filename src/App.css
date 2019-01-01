@@ -1,3 +1,8 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -107,4 +112,8 @@
     text-align: center;
     padding-left: 0px;
   }
+  .login-page {
+    
+  }
+
 }

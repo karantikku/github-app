@@ -4,13 +4,15 @@ export default () => (
   <div className="user">
     <img
       className="user__image"
-      src="https://avatars3.githubusercontent.com/u/16414052?s=460&v=4"
+      src={sessionStorage.getItem('userImage')}
       alt="user"
     />
-    <p className="user__user-name">Karan Tikku</p>
-    <p className="user__user-email">
-      Email:
-      <span className="user_emailId">karantikku7@gmail.com</span>
-    </p>
+    {sessionStorage.getItem('userFullName') !== "null" && <p className="user__name">{sessionStorage.getItem('userFullName')}</p>}
+    <p className="user__user-name">{sessionStorage.getItem('userName')}</p>
+    {sessionStorage.getItem('userLocation') !== "null" && <p className="user__user-location">{sessionStorage.getItem('userLocation')}</p>}
+    {sessionStorage.getItem('userEmail') !== "null" &&<p>  
+    Email:
+      <span className="user_emailId">{sessionStorage.getItem('userEmail')}</span>
+    </p>}
   </div>
 );
