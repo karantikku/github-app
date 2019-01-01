@@ -80,7 +80,7 @@ class LoginPage extends Component {
               })`
             }}
           />
-          <a className="button"
+          <a 
           style={{
             display: this.state.status === STATUS.INITIAL ? "inline" : "none"
           }}
