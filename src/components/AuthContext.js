@@ -13,6 +13,7 @@ class AuthProvider extends React.Component {
       this.logout = this.logout.bind(this)
   } 
   componentDidUpdate(prevProps, prevState, snapshot) {
+    //first login
     if (sessionStorage.getItem('userName')) {
       this.setState({ isAuth: "true" });
     }
