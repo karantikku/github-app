@@ -1,33 +1,29 @@
-import React from 'react'
+import React from "react";
 
-const AuthContext = React.createContext()
+const AuthContext = React.createContext();
 
 class AuthProvider extends React.Component {
   constructor(props) {
-      super(props);
-      if(typeof(sessionStorage.getItem('isAuth')) === 'undefined') {
-        sessionStorage.setItem('isAuth',"false");
-      } 
-      this.state = { isAuth: sessionStorage.getItem('isAuth') };
-      this.login = this.login.bind(this)
-      this.logout = this.logout.bind(this)
-  } 
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (sessionStorage.getItem('userName')) {
-      this.setState({ isAuth: "true" });
+    super(props);
+    if (typeof sessionStorage.getItem("isAuth") === "undefined") {
+      sessionStorage.setItem("isAuth", "false");
     }
-    if(prevState.isAuth !== this.state.isAuth)
-      sessionStorage.setItem('isAuth', this.state.isAuth);
+    this.state = { isAuth: sessionStorage.getItem("isAuth") };
+    this.login = this.login.bind(this);
+    this.logout = this.logout.bind(this);
   }
- 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevState.isAuth !== this.state.isAuth)
+      sessionStorage.setItem("isAuth", this.state.isAuth);
+  }
+
   login() {
-    
-    }
-  
+    alert("he");
+    this.setState({ isAuth: "true" });
+  }
 
   logout() {
-    this.setState({isAuth: "false"});
-    
+    this.setState({ isAuth: "false" });
   }
 
   render() {
@@ -38,13 +34,15 @@ class AuthProvider extends React.Component {
           login: this.login,
           logout: this.logout
         }}
-      > {console.log(this.state,sessionStorage)}
+      >
+        {" "}
+        {console.log(this.state, sessionStorage)}
         {this.props.children}
       </AuthContext.Provider>
-    )
+    );
   }
 }
 
-const AuthConsumer = AuthContext.Consumer
+const AuthConsumer = AuthContext.Consumer;
 
-export { AuthProvider, AuthConsumer }
+export { AuthProvider, AuthConsumer };
