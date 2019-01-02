@@ -5,6 +5,7 @@ import RepositoriesBlock from "./RepositoriesBlock";
 import ActivityList from "./ActivityList";
 class DashboardPage extends React.Component {
  
+ 
   render() {
     return (
        <div className="wrapper">
