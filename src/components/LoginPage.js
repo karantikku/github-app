@@ -89,7 +89,6 @@ class LoginPage extends Component {
                   display:
                     this.state.status === STATUS.INITIAL ? "inline" : "none"
                 }}
-                onClick={login}
                 href={`https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=user&redirect_uri=${REDIRECT_URI}`}
               >
                 Login
@@ -102,6 +101,7 @@ class LoginPage extends Component {
                   this.setState({
                     status: STATUS.AUTHENTICATED
                   });
+                  login();
                   this.props.history.push("/dashboard");
                 }
               }}
